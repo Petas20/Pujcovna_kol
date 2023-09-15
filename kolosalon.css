@@ -1,0 +1,73 @@
+/* Základní styly */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('podklad.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Úvodní obrázek */
+  .intro-image {
+    text-align: center;
+  }
+  
+  /* Formulář - základní kontejner */
+  section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  /* Formulář - nadpisy */
+  h3 {
+    margin-top: 20px;
+  }
+  
+  /* Formulář - vstupy a tlačítka */
+  form {
+    margin-top: 10px;
+  }
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  input[type="number"],
+  select {
+    padding: 5px;
+    width: 50%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* Responsivní úpravy */
+  @media (max-width: 768px) {
+    section {
+      margin: 20px 10px;
+    }
+  }
+  form{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

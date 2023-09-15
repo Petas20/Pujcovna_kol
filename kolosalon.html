@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kolosalon.css">
+    <title>Půjčovna kol</title>
+</head>
+<body>
+    <h1>Půjčovna kol</h1>
+    <section>
+        <fieldset>
+            <form id="typ_kola_form" class="form">
+                <h3>Vyber si kolo</h3>
+                <input type="checkbox" id="horske" value="500">
+                <label for="horske">Horské kolo 500 kč/den</label><br>
+                <input type="number" min="0" id="horske_ks" value="" placeholder="Počet kusů ">
+                <br><br>
+                <input type="checkbox" id="detske" value="200">
+                <label for="detske">Dětské kolo 200 kč/den</label><br>
+                <input type="number"min="0" size="1" id="detske_ks" value=""placeholder="Počet kusů ">
+                <br><br>
+                <input type="checkbox" id="silnicni" value="1500">
+                <label for="silnicni">Silniční kolo 1500 kč/den</label><br>
+                <input type="number"min="0" size="1" id="silnicni_ks" value=""placeholder="Počet kusů ">
+                <br><br>
+                <input type="checkbox" id="gravel" value="2500">
+                <label for="gravel">Gravel kolo 2500 kč/den</label><br>
+                <input type="number"min="0" size="1" id="gravel_ks" value=""placeholder="Počet kusů ">
+                <br>
+            </form>
+            <form id="delka_form">
+                <h3>Na jak dlouho?</h3>
+                <select name="delka_pujceni" id="delka_pujceni">
+                    <option value="5_dnu">5 dnů</option>
+                    <option value="7_dnu">7 dnů</option>
+                    <option value="14_dnu">14 dnů</option>
+                    <option value="30_dnu">30 dnů</option>
+                </select>
+            </form>
+            <form name="nosic" id="nosic_form">
+                <h3>Chceš cyklonosič?</h3>
+                <input type="radio" name="cyklonosic" id="stresni" value="5">
+                <label for="stresni">Ano, střešní (+5%)</label><br>
+                <input type="radio" name="cyklonosic" id="tazne" value="10">
+                <label for="tazne">Ano, na tažné zařízení (+10%)</label><br>
+                <input type="radio" name="cyklonosic" id="bez_nosice"  value="1" checked>
+                <label for="bez_nosice">Ne, nechci</label><br>
+            </form>
+            <form name="cena" id="cena">
+                <h3>Kolik to bude stát</h3>
+                <p>Celková cena</p>
+                <button type="button" onclick="celkem()">Spočítej mi to</button><br>
+                <input type="text" name="suma" id="suma" value=""><br>
+                <p>Kolik na to máš?</p>
+                <input type="text" name="rozpocet" id="rozpocet" placeholder="zadej castku"><br>
+                <p>Bude to stačit?</p>
+                <button type="button" onclick="rozdil()">Zkontrolovat</button><br>
+                <p>Rozdil ceny </p>
+                <input type="text" name="staci_to" id="staci_to" value=""><br>
+            </form>
+            <form id="email_form">
+                <h3>Objednat</h3>
+                <p>Zadej prosím mail, zašleme ti potvrzení o objednávce</p>
+                <input type="email" id="email" placeholder="mujmail@portal.xx" value=""><br><br>
+                <button type="button" id="poslat_email" onclick="kontrola_zavinace()">ODESLAT</button>
+            </form>
+        </fieldset>
+    </section>
+    <script src="kolosalon.js"></script>
+</body>
+</html>
